@@ -3,7 +3,7 @@
 	CONTENT-TYPE：application/json
 ## 1.1.1	請求規格
 	環境別	類型	API路徑
-	UT	Get	http://localhost:8080/find
+	UT	Get	http://{host-ip}:8080/find
 ## 1.1.2	回應規格
 	Body回應範例
 	[
@@ -32,7 +32,7 @@
 	CONTENT-TYPE：application/json
 ## 1.2.1 請求規格
 	環境別	類型	API路徑
-	UT	Post	http://localhost:8080/insert
+	UT	Post	http://{host-ip}:8080/insert
 
 Body參數:
 
@@ -74,7 +74,7 @@ Body請求範例:
 	CONTENT-TYPE：application/json
 ## 1.3.1 請求規格
 	環境別	類型	API路徑
-	UT	put	http://localhost:8080/update
+	UT	put	http://{host-ip}:8080/update
 Body參數:
 
 <table>
@@ -109,7 +109,7 @@ Body請求範例:
 	CONTENT-TYPE：application/json
 ## 1.4.1 請求規格
 	環境別	類型	API路徑
-	UT	delete	http://localhost:8080/delete/{id}
+	UT	delete	http://{host-ip}:8080/delete/{id}
 
 URL請求範例:
 	

@@ -49,11 +49,7 @@ public class Controller {
 	public Book insert(@RequestBody Book book) {
 		System.out.println("got insert post");
 		System.out.println("got parameter id="+book.toString());
-		//for
-		book.setId(null);
-		
-		book=bookService.insert(book);
-	
+		book=bookService.insert(book);	
 		return book;
 	}
 	
@@ -61,8 +57,7 @@ public class Controller {
 	@ResponseBody
 	public String update(@RequestBody @Validated Book book) {
 		try {
-		book.getId();
-	      
+			book.getId();
 		}catch (Exception e){
 			 throw new InvalidRequestException("Book or ID must not be null!");
 		}
@@ -89,13 +84,8 @@ public class Controller {
 		catch(Exception e) {
 	        throw new NotFoundException("Book with ID " + id + " does not exist.");
 	    }
-
-//		if ( id== null) {
-//	        throw new InvalidRequestException("Book ID must not be null!");
-//	    }
-
 		this.bookService.delete(id);
-		System.out.println("controller");
+
 		return  "Succeeded. Book :"+id+" had been deleted. ";
 	}
 	
