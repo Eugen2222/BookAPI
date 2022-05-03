@@ -30,19 +30,19 @@ public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="book_name")
+	@Column(name="book_name", columnDefinition = "nvarchar", nullable = false, length = 500)
 	private String name;
-	@Column(name="book_author")
+	@Column(name="book_author", columnDefinition = "nvarchar", nullable = false, length = 255)
 	private String author;
 	@Column(name="book_ISBN")
 	private Integer ISBN;
-	@Column(name="book_publisher")
+	@Column(name="book_publisher", columnDefinition = "nvarchar", nullable = false, length = 255)
 	private String publisher;
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
-	@Column(name="book_publish_date")
+	@Column(name="book_publish_date", nullable = false)
 	private Date publishDate;
-	@Column(name="book_price")
+	@Column(name="book_price", nullable = false)
 	private Integer price;
 
 	

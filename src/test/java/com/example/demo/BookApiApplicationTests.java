@@ -37,17 +37,23 @@ class BookApiApplicationTests {
     @MockBean
     BookService bks;
     Book RECORD_1 = new Book(testId ,"boook","david",123,"ok store",now,120);
+    Book RECORD_2 = new Book(2 ,"boook2","david",123,"ok store",now,120);    
 
-
-    
-    
     @Test
-    public void add() throws Exception {
-    	Book RECORD_1 = new Book(testId ,"boook","david",123,"ok store",now,120);
-    	Book book=bks.insert(RECORD_1);
-    	System.out.println(123+"");
-    	System.out.println(bks.findOne(testId));
+    public void getAllRecords_success() throws Exception {
+        List<Book> records = new ArrayList<>(Arrays.asList(RECORD_1,RECORD_2));
+        
+        Mockito.when(bks.findAll()).thenReturn(records);
+        
+        mockMvc.perform(MockMvcRequestBuilders
+                .get("/find")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(2)))
+                .andExpect(jsonPath("$[1].name", is("boook2")));
     }
+    
+   
     @Test
     public void getFindRecords_success() throws Exception {
         List<Book> records = new ArrayList<>(Arrays.asList(RECORD_1));
@@ -111,7 +117,7 @@ class BookApiApplicationTests {
         mockMvc.perform(mockRequest)
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", notNullValue()))
-        		.andExpect(jsonPath("$", containsString("Successed.")));
+        		.andExpect(jsonPath("$", containsString("Succeeded.")));
         
                 
     }
