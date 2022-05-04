@@ -1,11 +1,11 @@
-#1. API 說明
+##1. API 說明
 	本API Service於docker環境啟動方式:
 	1. 開啟powershell
 	2. cd 至專案Dockerfile之資料夾
 	3. 執行 "docker build -t bookapi ." 
 	4. 執行 "docker run -p 8080:8080 -t bookapi"
 
-#1.1 列出H2中所有的書本
+##1.1 列出H2中所有的書本
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
 ## 1.1.1	請求規格
@@ -34,7 +34,7 @@
 	    }
 	]
 
-#1.2 新增一本書籍
+##1.2 新增一本書籍
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
 ## 1.2.1 請求規格
@@ -76,7 +76,7 @@ Body請求範例:
 	    "isbn": 12345
 	}
 	
-#1.3 更新一本書籍資訊
+##1.3 更新一本書籍資訊
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
 ## 1.3.1 請求規格
@@ -111,7 +111,7 @@ Body請求範例:
 ## 1.3.2	回應規格範例		
 
 	Succeeded. The information of Book id:1 had been updated. 
-#1.4 刪除一本書籍
+##1.4 刪除一本書籍
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
 ## 1.4.1 請求規格
