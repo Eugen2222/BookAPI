@@ -1,0 +1,9 @@
+apiException\NotFoundException.class
+com\example\demo\Book$BookBuilder.class
+com\example\demo\Book.class
+apiException\InvalidRequestException.class
+com\example\demo\BookApiApplication.class
+com\example\demo\RestErrorHandler.class
+com\example\demo\BookRepository.class
+com\example\demo\Controller.class
+com\example\demo\BookService.class
