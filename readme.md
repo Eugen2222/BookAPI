@@ -1,10 +1,17 @@
+#1. API 說明
+	本API Service於docker環境啟動方式:
+	1. 開啟powershell
+	2. cd 至專案Dockerfile之資料夾
+	3. 執行 "docker build -t bookapi ." 
+	4. 執行 "docker run -p 8080:8080 -t bookapi"
+
 #1.1 列出H2中所有的書本
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
 ## 1.1.1	請求規格
 	環境別	類型	API路徑
 	UT	Get	http://{host-ip}:8080/find
-## 1.1.2	回應規格
+## 1.1.2	回應規格範例
 	Body回應範例
 	[
 	    {
