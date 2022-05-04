@@ -6,8 +6,10 @@
 	2. cd 至專案Dockerfile之資料夾
 	3. 執行 "docker build -t bookapi ." 
 	4. 執行 "docker run -p 8080:8080 -t bookapi"
+	
+	JUnit 請至src/test中參考。
 
-## 1.1 列出H2中所有的書本
+## 1.1 列出H2中所有的書本API
 
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
@@ -37,7 +39,7 @@
 	    }
 	]
 
-## 1.2 新增一本書籍
+## 1.2 新增一本書籍API
 
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
@@ -81,7 +83,7 @@ Body請求範例:
 	    "isbn": 12345
 	}
 	
-## 1.3 更新一本書籍資訊
+## 1.3 更新一本書籍資訊API
 
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
@@ -119,7 +121,7 @@ Body請求範例:
 
 	Succeeded. The information of Book id:1 had been updated. 
 	
-## 1.4 刪除一本書籍
+## 1.4 刪除一本書籍API
 
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
