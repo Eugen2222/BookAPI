@@ -1,4 +1,5 @@
 ##1. API 說明
+
 	本API Service於docker環境啟動方式:
 	1. 開啟powershell
 	2. cd 至專案Dockerfile之資料夾
@@ -6,6 +7,7 @@
 	4. 執行 "docker run -p 8080:8080 -t bookapi"
 
 ##1.1 列出H2中所有的書本
+
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
 ## 1.1.1	請求規格
@@ -35,8 +37,10 @@
 	]
 
 ##1.2 新增一本書籍
+
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
+	
 ## 1.2.1 請求規格
 	環境別	類型	API路徑
 	UT	Post	http://{host-ip}:8080/insert
@@ -77,8 +81,10 @@ Body請求範例:
 	}
 	
 ##1.3 更新一本書籍資訊
+
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
+	
 ## 1.3.1 請求規格
 	環境別	類型	API路徑
 	UT	put	http://{host-ip}:8080/update
@@ -111,9 +117,12 @@ Body請求範例:
 ## 1.3.2	回應規格範例		
 
 	Succeeded. The information of Book id:1 had been updated. 
+	
 ##1.4 刪除一本書籍
+
 	API類型：Restful WebService
 	CONTENT-TYPE：application/json
+	
 ## 1.4.1 請求規格
 	環境別	類型	API路徑
 	UT	delete	http://{host-ip}:8080/delete/{id}
