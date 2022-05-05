@@ -46,7 +46,7 @@ public class Controller {
 	
 	@PostMapping(value="/insert")
 	@ResponseBody
-	public Book insert(@RequestBody Book book) {
+	public Book insert(@RequestBody  Book book) {
 		System.out.println("got insert post");
 		System.out.println("got parameter id="+book.toString());
 		book=bookService.insert(book);	
@@ -65,8 +65,9 @@ public class Controller {
 		System.out.println("got parameter id="+book.getId());
 		System.out.println("got parameter ="+book.toString());
 	
-		
-		if (bookService.findOne(book.getId())==null) {
+		try {
+			bookService.findOne(book.getId()).getName();
+		}catch(Exception e) {
 	        throw new NotFoundException("Book with ID " + book.getId() + " does not exist.");
 	    }
 		Book res=bookService.update(book);
